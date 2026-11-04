@@ -1,0 +1,28 @@
+{
+  "name": "CAnsightWebP",
+  "version": "1.10.0",
+  "summary": "Pinned native WebP codec for Ansight offline captures",
+  "homepage": "https://github.com/ansight-ai/ansight-sdk",
+  "license": {
+    "type": "BSD-3-Clause",
+    "file": "src/ios/Sources/CAnsightWebP/COPYING"
+  },
+  "authors": {
+    "Ansight": "dev@ansight.ai"
+  },
+  "source": {
+    "git": "https://github.com/ansight-ai/ansight-sdk.git",
+    "tag": "v1.10.0"
+  },
+  "platforms": {
+    "ios": "15.0",
+    "osx": "10.15"
+  },
+  "source_files": "src/ios/Sources/CAnsightWebP/**/*.{c,h}",
+  "public_header_files": "src/ios/Sources/CAnsightWebP/include/*.h",
+  "header_mappings_dir": "src/ios/Sources/CAnsightWebP",
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/src/ios/Sources/CAnsightWebP/vendor\"",
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) WEBP_USE_THREAD"
+  }
+}
